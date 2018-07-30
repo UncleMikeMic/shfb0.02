@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d7aaf010955738e4ab7def817665db18
+labels:
+- Highscores
+- Score
+- Leaderboards
+- Plugin
+- Simple
+- Easy
+- Leaderboard
+- Steamworks
+- Steam
+- Submit
+timeCreated: 1495173149
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

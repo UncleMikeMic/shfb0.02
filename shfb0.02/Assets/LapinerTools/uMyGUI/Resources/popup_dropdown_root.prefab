@@ -1469,7 +1469,6 @@ MonoBehaviour:
   m_entrySpacing: 5
   m_staticText: 
   m_nothingSelectedText: 
-  m_improveNavigationFocus: 1
   m_entries: []
   m_selectedIndex: -1
 --- !u!114 &11494142
@@ -2129,6 +2128,7 @@ CanvasGroup:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167852}
+  m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
@@ -2144,4 +2144,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 127238}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

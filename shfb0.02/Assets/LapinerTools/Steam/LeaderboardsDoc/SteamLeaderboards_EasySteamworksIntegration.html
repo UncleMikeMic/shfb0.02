@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr" >
+<head>
+<link rel="stylesheet" href="css/my_custom_styles.css" type="text/css" />
+<link rel="stylesheet" href="css/template.css" type="text/css" />
+</head>
+<body class="documentation">
+<h1 class="page-title">Steam Leaderboards - Easy Steamworks Integration</h1>
+<b><a href="http://www.freebord-game.com/index.php/steam-leaderboards-easy-steamworks-integration#doc">FULL ONLINE DOCUMENTATION (it looks better :)</a></b><br />
+<b><a href="http://www.freebord-game.com/index.php/steam-leaderboards-easy-steamworks-integration">PROJECT HOME PAGE</a></b><br /><br />
+<font color="#FF0000">If you have any questions or you cannot find any help for your problem in this documentation then please write a post in the following unity forum thread:<br /><a href="https://forum.unity3d.com/threads/steam-leaderboards-easy-steamworks-integration.479183/">Unity Forum: Steam Leaderboards - Easy Steamworks Integration.</a><br />Please do the same also if you have any feedback or improvement suggestion to this documentation.</font><br /><br />
+<a name="doc"></a>
+<p>
+<strong><big>Documentation</big></strong>
+<br />
+<a href="#doc_started">Getting Started</a><br />
+<a href="#doc_link">Link App</a><br />
+<a href="#doc_popups">Show Independent Popups</a><br />
+<a href="#doc_static">Add To Existing uGUI</a><br />
+<a href="http://www.freebord-game.com/EasySteam/ScriptingReference/class_lapiner_tools_1_1_steam_1_1_steam_leaderboards_main.html">Scripting Reference</a><br />
+</p>
+
+
+
+<a name="doc_started"></a><strong><big>Getting Started</big></strong><br />
+After importing the Unity package the leaderboards examples (in ExampleScenesPopup or ExampleScenesStatic folders) will work out of the box - Steam must be running.<br />
+By default Steamworks.NET will use the Steam AppId 480 - SpaceWar, use it for your leaderboards integration tests.<br />
+Please follow the instructions in <a href="#doc_link"><strong>Link App</strong></a> to view and submit highscores to the leaderboards of your game.
+<br />
+<br />
+
+
+
+<a name="doc_link"></a><strong><big>Link App</big></strong><br />
+Follow the steps below to set the AppId.
+<ul>
+<li type="disc">
+    Start one of the test scenes to generate the <strong>steam_appid.txt</strong> file in the root of your project (the folder where Assets, Library and ProjectSettings directories a located).
+</li>
+<li type="disc">
+    Open the <strong>steam_appid.txt</strong> file and replace 480 with your Steam AppId.
+</li>
+<li type="disc">
+    Restart Unity Editor to load your new AppId.
+</li>
+<li type="disc">
+    Now you should be able to view and submit highscores to the leaderboards of your game by using the provided example scenes (in the ExampleScenesPopup or ExampleScenesStatic folders).
+</li>
+</ul>
+
+
+
+<a name="doc_popups"></a><strong><big>Show Independent Popups</big></strong><br />
+The single code line below will show a leaderboard popup for the table named 'Test'. Please find detailed example code in addition with some other useful hints in the <strong>SteamLeaderboardsExamplePopup</strong> and <strong>SteamLeaderboardsExampleAdvancedSettings</strong> classes.
+<code>
+<p class="my_code_comment">// show the Steam Leaderboard popup for the table 'Test'</p>
+((SteamLeaderboardsPopup)uMyGUI_PopupManager.Instance.ShowPopup("steam_leaderboard")).LeaderboardUI.DownloadScores("Test");
+</code>
+
+The single code line below will upload the score value 123 to the table named 'Test'. If the user has improved his recod, then a popup showing his current score, global rank and rank change will be shown. Please find detailed example code in addition with some other useful hints in the <strong>SteamLeaderboardsExamplePopup</strong> and <strong>SteamLeaderboardsExampleAdvancedSettings</strong> classes.
+<code>
+<p class="my_code_comment">// upload score to Steam Leaderboards</p>
+SteamLeaderboardsUI.UploadScore("Test", 123);
+</code>
+
+
+
+<a name="doc_static"></a><strong><big>Add To Existing uGUI</big></strong><br />
+You will find the <strong>SteamLeaderboard</strong> prefab included in the package. All you need to do is simply drag n' drop it into your Canvas or add it to any of your UI elements.
+<br />
+<br />
+
+</body>
+</html>
